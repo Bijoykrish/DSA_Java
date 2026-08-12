@@ -1,9 +1,6 @@
 package Collections;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Array_list {
     public static void main(String[] args) {
@@ -17,6 +14,9 @@ public class Array_list {
          // Predefined methods available in Collections 1. add 2. remove(index),  3.list addAll(list2)
         // 4. list.removeAll(list1) 5. list.size()
         // 5. iterator 6. get and set using index - it will not work if list is created using Collection keyword
+        //6. contains() -- list1.contains(value) - true/false 7. sort() -- sort an collections using  Collections.sort(list)
+        // 8. isEmpty() - True/False  9. inexOF(value) -- return the index of the value from the array, if not found it returns -1
+        // collections is a util class which has methods like sort(), reverse(), shuffle()
         list.add(10); list.add(20);
         System.out.println(list);
         list.add(40);
@@ -47,7 +47,27 @@ public class Array_list {
         // getting the element using the get(index)
         System.out.println("getting using get"+list2.get(2));
         System.out.println("setting using set"+list2.set(2,115));
+        // convert any collection into array - toArray();
+        System.out.println("Converting collection to Array: using toArray()");
+        Object[] newArray = list2.toArray();
+        for(Object obj : newArray){
+            System.out.println(obj);
+        }
+        // contains() - to check an element is present in the list
+        System.out.println("check the element is present in the list or not : "+ list2.contains(111));
+        list2.add(12); list2.add(99); list2.add(1); System.out.println("Printing the list2 before the sort  : "+list2);
+        Collections.sort(list2);
+        System.out.println("List2 after the sort is : "+list2);
 
+        // reverse the list
+        System.out.println("Printing the List1 : " + list1);
+        Collections.sort(list1, Collections.reverseOrder());
+        System.out.println("Printing the List1 after the reverse sort : "+ list1);
+        //list1.sort(Collections.reverseOrder());
+        // Check the list is empty or not
+        System.out.println(list2.isEmpty()); // false
+        //  To Find the index of the value of the list
+        System.out.println("Index of 60 in the list1 is : "+list1.indexOf(60)); // if not found returns -1
 
 
     }
