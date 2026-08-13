@@ -18,7 +18,8 @@ public class Queue_learning {
         System.out.println("Using peek function : "+ queue.peek());
         // remove() - returns and removes the head of the queue - if the returns exception if the queue is empty
         // poll() - returns and removes the head of the queue - if the returns null if the queue is empty
-        // In Queue - to insert element use offer(), to access head use peek(), to remove use peek()
+        // In Queue - to insert element use offer(), to access head use peek(), to remove use peek() to handle the exceptions automatically
+
         System.out.println("Using poll function - retuen and remove the head : "+ queue.poll());
         System.out.println("See the front element of the queue using peek : "+queue.peek());
 
